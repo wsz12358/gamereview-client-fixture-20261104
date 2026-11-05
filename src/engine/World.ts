@@ -1,7 +1,9 @@
+import { ATTACK_SCORE } from './constants/combat.ts';
+
 export class World {
   score = 0;
 
   attack(): void {
-    this.score += 1;
+    this.score += ATTACK_SCORE;
   }
 }
