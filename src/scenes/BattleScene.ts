@@ -27,12 +27,17 @@ export class BattleScene {
 
   private async initialize(): Promise<void> {
     const resolved = await this.load();
+    if (this.disposed) {
+      resolved.dispose();
+      return;
+    }
     this.asset = resolved;
     this.client.ready();
   }
 
   shutdown(): void {
     this.disposed = true;
+    this.input.removeEventListener('keydown', this.onKey);
     this.asset?.dispose();
     this.asset = undefined;
   }
