@@ -37,7 +37,6 @@ export class BattleScene {
 
   shutdown(): void {
     this.disposed = true;
-    this.input.removeEventListener('keydown', this.onKey);
     this.asset?.dispose();
     this.asset = undefined;
   }
