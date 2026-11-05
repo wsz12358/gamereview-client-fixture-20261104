@@ -1,0 +1,6 @@
+{
+  "forbiddenImports": [
+    { "from": "src/ui/", "to": "src/engine/", "reason": "UI must access the game world through GameClient, never construct an engine World directly." },
+    { "from": "src/kernel/", "to": "src/adapters/", "reason": "The kernel must not depend on adapters." }
+  ]
+}

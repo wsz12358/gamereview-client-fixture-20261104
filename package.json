@@ -1,0 +1,6 @@
+{
+  "name": "gamereview-game-fixture", "version": "1.0.0", "private": true, "type": "module",
+  "description": "Synthetic TypeScript game client commits for testing GameReview",
+  "scripts": { "dev": "vite --host 127.0.0.1 --port 5180", "build": "tsc --noEmit && vite build", "test": "node --experimental-strip-types --test tests/*.test.ts" },
+  "devDependencies": { "@types/node": "^22.13.0", "typescript": "^5.7.3", "vite": "^6.1.0" }
+}
